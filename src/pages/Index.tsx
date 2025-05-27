@@ -40,40 +40,47 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
+    <div className="min-h-screen">
+      {/* Header integrado com Bloco 1 */}
+      <section className="py-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+        {/* Header */}
         <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-center">
-            <div className="text-2xl font-bold text-emerald-700">Método Alquimia</div>
+          <div className="flex items-center">
+            <div className="flex items-center space-x-3">
+              {/* Logo Método Alquimia */}
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div className="text-xl font-bold text-yellow-400">Método Alquimia</div>
+            </div>
           </div>
         </div>
-      </header>
 
-      {/* Bloco 1: Cabeçalho de Impacto */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
-        <div className="container mx-auto px-4">
+        {/* Bloco 1: Cabeçalho de Impacto */}
+        <div className="container mx-auto px-4 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Cansada de ser <span className="text-yellow-300">invisível?</span>
+                Cansada de ser <span className="text-yellow-400">invisível?</span>
               </h1>
-              <h2 className="text-xl lg:text-2xl mb-8 text-emerald-100 leading-relaxed">
+              <h2 className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
                 Descubra o plano prático de 2 dias para construir sua marca pessoal, se posicionar como autoridade e se tornar uma Nutri de Valor.
               </h2>
-              <p className="text-lg mb-8 text-emerald-100">
+              <p className="text-lg mb-8 text-gray-300">
                 Uma imersão 100% ao vivo e online com João Paulo Mendes. Dias 15 e 16 de Julho.
               </p>
               <Button 
                 size="lg" 
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-0"
               >
                 QUERO GARANTIR MINHA VAGA NO 1º LOTE POR R$19
               </Button>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-96 bg-gray-300 rounded-lg shadow-2xl flex items-center justify-center">
-                <span className="text-gray-600">Foto do Mentor</span>
+              <div className="w-80 h-96 bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl shadow-2xl flex items-center justify-center border border-gray-600">
+                <span className="text-gray-400 text-center">Foto do Mentor<br/>João Paulo Mendes</span>
               </div>
             </div>
           </div>
@@ -81,14 +88,14 @@ const Index = () => {
       </section>
 
       {/* Bloco 2: A Dor - Conexão com o Público */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
             Se você se sente assim, esta imersão é para você...
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
             {painPoints.map((point, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 bg-red-50 rounded-lg border-l-4 border-red-400">
+              <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg border-l-4 border-red-400 shadow-sm">
                 <Target className="text-red-500 mt-1 flex-shrink-0" size={24} />
                 <p className="text-lg text-gray-700">...{point}</p>
               </div>
@@ -98,7 +105,7 @@ const Index = () => {
       </section>
 
       {/* Bloco 3: A Virada de Chave */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8 text-gray-800">
@@ -112,52 +119,52 @@ const Index = () => {
       </section>
 
       {/* Bloco 4: O Cronograma da Imersão */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
             O Plano de 2 Dias para Destravar sua Autoridade
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 border-emerald-200 hover:border-emerald-400 transition-colors duration-300">
+            <Card className="border-2 border-purple-200 hover:border-purple-400 transition-colors duration-300 bg-white">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <Calendar className="text-emerald-600 mr-3" size={32} />
-                  <h3 className="text-2xl font-bold text-emerald-700">Dia 1: O Alicerce da Autoridade</h3>
+                  <Calendar className="text-purple-600 mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-purple-700">Dia 1: O Alicerce da Autoridade</h3>
                 </div>
-                <p className="text-lg text-emerald-600 font-semibold mb-4">
+                <p className="text-lg text-purple-600 font-semibold mb-4">
                   Foco em ESTRATÉGIA. Você vai sair com uma clareza que nunca teve sobre sua marca.
                 </p>
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">O que veremos:</h4>
                   <div className="flex items-start space-x-3">
-                    <Check className="text-emerald-500 mt-1 flex-shrink-0" size={20} />
+                    <Check className="text-purple-500 mt-1 flex-shrink-0" size={20} />
                     <span className="text-gray-700">A Mentalidade da Nutri de Valor</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <Check className="text-emerald-500 mt-1 flex-shrink-0" size={20} />
+                    <Check className="text-purple-500 mt-1 flex-shrink-0" size={20} />
                     <span className="text-gray-700">Desvendando seu "Elixir Estratégico" (Workshop prático para definir seu propósito, posicionamento e mensagem central)</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-teal-200 hover:border-teal-400 transition-colors duration-300">
+            <Card className="border-2 border-green-200 hover:border-green-400 transition-colors duration-300 bg-white">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <Star className="text-teal-600 mr-3" size={32} />
-                  <h3 className="text-2xl font-bold text-teal-700">Dia 2: A Construção da Autoridade</h3>
+                  <Star className="text-green-600 mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-green-700">Dia 2: A Construção da Autoridade</h3>
                 </div>
-                <p className="text-lg text-teal-600 font-semibold mb-4">
+                <p className="text-lg text-green-600 font-semibold mb-4">
                   Foco em AÇÃO. Você vai sair com um plano prático para os seus próximos 30 dias.
                 </p>
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">O que veremos:</h4>
                   <div className="flex items-start space-x-3">
-                    <Check className="text-teal-500 mt-1 flex-shrink-0" size={20} />
+                    <Check className="text-green-500 mt-1 flex-shrink-0" size={20} />
                     <span className="text-gray-700">O Ecossistema da Atração Magnética (A lógica por trás do conteúdo que atrai)</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <Check className="text-teal-500 mt-1 flex-shrink-0" size={20} />
+                    <Check className="text-green-500 mt-1 flex-shrink-0" size={20} />
                     <span className="text-gray-700">Seu Plano de Ação de Conteúdo (Workshop prático para montar seu calendário editorial)</span>
                   </div>
                 </div>
@@ -168,25 +175,25 @@ const Index = () => {
       </section>
 
       {/* Bloco 5: Seção de Preço e CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-yellow-400 to-orange-400">
+      <section className="py-16 bg-gradient-to-br from-green-500 to-green-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8 text-gray-800">
+          <h2 className="text-4xl font-bold mb-8 text-white">
             Sua chance de destravar sua carreira por um valor simbólico.
           </h2>
-          <p className="text-xl mb-12 text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl mb-12 text-green-100 max-w-4xl mx-auto">
             O conhecimento que será entregue nesta imersão vale centenas de reais, mas meu objetivo é criar um movimento de Nutricionistas de Valor. Por isso, estou disponibilizando os ingressos em lotes com um preço especial de lançamento.
           </p>
           
-          <Card className="max-w-md mx-auto bg-white shadow-2xl border-4 border-yellow-300">
+          <Card className="max-w-md mx-auto bg-white shadow-2xl border-4 border-yellow-400">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">LOTE 1</h3>
-              <div className="text-5xl font-bold text-emerald-600 mb-4">R$ 19,00</div>
+              <div className="text-5xl font-bold text-green-600 mb-4">R$ 19,00</div>
               <p className="text-red-600 font-semibold mb-6">
                 (Vagas limitadas. O preço vai subir para R$ 47,00 no segundo lote)
               </p>
               <Button 
                 size="lg" 
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 SIM, QUERO MINHA VAGA NO 1º LOTE AGORA!
               </Button>
@@ -207,8 +214,8 @@ const Index = () => {
             </h2>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
-                <div className="w-80 h-96 bg-gray-300 rounded-lg shadow-xl flex items-center justify-center">
-                  <span className="text-gray-600">Foto João Paulo Mendes</span>
+                <div className="w-80 h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-xl flex items-center justify-center">
+                  <span className="text-gray-600 text-center">Foto<br/>João Paulo Mendes</span>
                 </div>
               </div>
               <div>
@@ -229,7 +236,7 @@ const Index = () => {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden">
+              <Card key={index} className="overflow-hidden bg-white">
                 <Collapsible>
                   <CollapsibleTrigger 
                     onClick={() => toggleFaq(index)}
@@ -256,14 +263,14 @@ const Index = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-center">
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">
             Não perca esta oportunidade única!
           </h2>
           <Button 
             size="lg" 
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-xl px-12 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-xl px-12 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             GARANTIR MINHA VAGA NO 1º LOTE - R$19
           </Button>
@@ -271,7 +278,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2024 Método Alquimia. Todos os direitos reservados.</p>
         </div>
